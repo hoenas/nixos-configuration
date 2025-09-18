@@ -2,7 +2,7 @@
 {
   home = {
     packages = with pkgs; [
-      hello
+      zsh      
     ];
 
     username = "jonas";
@@ -12,4 +12,14 @@
     # Don't ever change this after the first build.  Don't ask questions.
     stateVersion = "23.11";
   };
+
+  programs.zsh = {
+    # Your zsh config
+    oh-my-zsh = { # "ohMyZsh" without Home Manager
+      enable = true;
+      plugins = [ "git" "thefuck" ];
+      theme = "powerlevel10k";
+    };
+  };
+
 }
