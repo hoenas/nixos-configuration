@@ -34,6 +34,11 @@
       theme = "powerlevel10k";
     };
   };
-
-
+  # Environment
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    BROWSER = "firefox";
+    TERMINAL = "kitty";
+    SHELL = "zsh";
+  };
 }
