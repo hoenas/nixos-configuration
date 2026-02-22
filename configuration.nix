@@ -107,6 +107,12 @@
     gimp
     # Dev tools
     vscode
+    # Rust
+    rustc
+    rustup
+    cargo
+    # Misc
+    nextcloud-client
     ];
 
     shell = pkgs.zsh;
