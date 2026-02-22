@@ -100,15 +100,6 @@
     description = "Jonas";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-    # Util
-    tree
-    htop
-    neovim
-    kitty
-    zsh
-    zsh-powerlevel10k
-    git
-    gnumake
     # Hobby stuff
     steam
     freecad
@@ -116,7 +107,6 @@
     gimp
     # Dev tools
     vscode
-    docker
     ];
 
     shell = pkgs.zsh;
@@ -143,8 +133,18 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    neovim
+    meslo-lgs-nf
+    # Util
+    tree
+    htop
+    neovim
+    kitty
+    zsh
+    zsh-powerlevel10k
+    git
+    gnumake
+    docker
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
