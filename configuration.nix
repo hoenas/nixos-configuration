@@ -106,11 +106,13 @@
     darktable
     gimp
     # Dev tools
+    kitty
     vscode
     # Rust
     rustc
     rustup
     cargo
+    python3
     # Misc
     nextcloud-client
     ];
@@ -132,9 +134,14 @@
   # Enable Oh-my-zsh
   programs.zsh.ohMyZsh = {
     enable = true;
-    plugins = [ "git" "sudo" "docker" ];
-    theme = "powerlevel10k";
+    plugins = [
+      "git"
+      "python"
+      "man"
+    ];
+    theme = "agnoster";
   };
+  programs.zsh.promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
 
   programs.neovim.defaultEditor = true;
 
