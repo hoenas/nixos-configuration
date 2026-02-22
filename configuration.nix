@@ -100,6 +100,9 @@
     description = "Jonas";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+    # Fonts
+    nerd-fonts.adwaita-mono
+    nerd-fonts.droid-sans-mono
     # Hobby stuff
     steam
     freecad
@@ -149,12 +152,12 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     neovim
-    meslo-lgs-nf
     # Util
     tree
     htop
     neovim
     kitty
+    kitty-themes
     zsh
     zsh-powerlevel10k
     git
