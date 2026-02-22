@@ -100,9 +100,10 @@
     description = "Jonas";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-    # Fonts
+    # General stuff
     nerd-fonts.adwaita-mono
     nerd-fonts.droid-sans-mono
+    rose-pine-cursor
     # Hobby stuff
     steam
     freecad
@@ -111,10 +112,17 @@
     # Dev tools
     kitty
     vscode
-    # Rust
+    sccache
     rustc
     rustup
     cargo
+    gnumake
+    gcc
+    libiconv
+    autoconf
+    automake
+    libtool
+    pkg-config
     python3
     # Misc
     nextcloud-client
