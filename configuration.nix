@@ -47,8 +47,8 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -79,7 +79,6 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
   services.libinput = {
     enable = true;
     mouse = {
@@ -117,15 +116,28 @@
     gimp
     # Dev tools
     vscode
+    docker
     ];
 
     shell = pkgs.zsh;
 
   };
 
-  # Install firefox.
+  # Install firefox
   programs.firefox.enable = true;
-  programs.zsh.enable = true;
+  # Install zsh
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    syntaxHighlighting.enable = true;
+  };
+  # Enable Oh-my-zsh
+  programs.zsh.ohMyZsh = {
+    enable = true;
+    plugins = [ "git" "sudo" "docker" ];
+    theme = "powerlevel10k";
+  };
+
   programs.neovim.defaultEditor = true;
 
   # List packages installed in system profile. To search, run:
