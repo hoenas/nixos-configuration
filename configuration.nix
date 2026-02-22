@@ -119,6 +119,8 @@
 
   };
 
+  programs.steam.gamescopeSession.enable = true;
+
   # Install firefox
   programs.firefox.enable = true;
   # Install zsh
