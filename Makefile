@@ -1,3 +1,7 @@
 .PHONY: update
 update:
-	home-manager switch --flake .#jonas
+	cp configuration.nix /etc/nixos/configuration.nix
+	nixos-rebuild switch
+
+clean:
+	nix-collect-garbage
