@@ -109,6 +109,7 @@
     freecad
     darktable
     gimp
+    discord
     # Dev tools
     kitty
     vscode
