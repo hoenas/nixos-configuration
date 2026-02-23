@@ -14,6 +14,13 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.systemd-boot.edk2-uefi-shell.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  # Create extra entry for Windows
+  boot.loader.systemd-boot.extraEntries = 
+  { "windows.conf" = ''
+  title Windows
+  efi /boot/EFI/edk2-uefi-shell/shell.efi
+  options -nointerrupt -nomap -noversion HD0b:EFI\Microsoft\Boot\Bootmgfw.efi
+  '';};
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -174,6 +181,8 @@
     docker
   ];
 
+  # Enable flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];  
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
