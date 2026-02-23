@@ -5,3 +5,4 @@ update:
 
 clean:
 	nix-collect-garbage
+	nix-env --delete-generations +3
