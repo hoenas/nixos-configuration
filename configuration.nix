@@ -114,6 +114,7 @@
     nerd-fonts.adwaita-mono
     nerd-fonts.droid-sans-mono
     rose-pine-cursor
+    gparted
     # Hobby stuff
     steam
     freecad
