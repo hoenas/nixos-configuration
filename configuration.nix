@@ -145,6 +145,7 @@
 
   };
 
+  programs.git.config.core.editor = "nvim";
   programs.steam.gamescopeSession.enable = true;
 
   # Install firefox
