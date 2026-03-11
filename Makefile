@@ -1,7 +1,7 @@
 .PHONY: update
 update:
 	cp configuration.nix /etc/nixos/configuration.nix
-	nixos-rebuild switch
+	nixos-rebuild switch --upgrade
 
 update-bootloader: update
 	nixos-rebuild --install-bootloader boot
