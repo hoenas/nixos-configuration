@@ -139,12 +139,14 @@
     python3
     # Misc
     nextcloud-client
+    bottles
     ];
 
     shell = pkgs.zsh;
 
   };
 
+  programs.gamemode.enable = true;
   programs.git.config.core.editor = "nvim";
   programs.steam.gamescopeSession.enable = true;
 
