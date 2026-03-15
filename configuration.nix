@@ -122,6 +122,7 @@
     gimp
     discord
     orca-slicer
+    kicad
     # Dev tools
     kitty
     vscode
