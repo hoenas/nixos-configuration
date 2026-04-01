@@ -4,6 +4,8 @@ update:
 	nixos-rebuild switch --upgrade
 
 update-bootloader: update
+	nix-channel --update
+	nix-channel --update unstable
 	nixos-rebuild --install-bootloader boot
 
 clean:

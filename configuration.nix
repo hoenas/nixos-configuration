@@ -141,6 +141,7 @@
     # Misc
     nextcloud-client
     bottles
+    telegram-desktop
     ];
 
     shell = pkgs.zsh;
