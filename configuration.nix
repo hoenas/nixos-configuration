@@ -194,6 +194,17 @@
     docker
     gtk4
     wrapGAppsHook4
+    # Wine
+    # support both 32-bit and 64-bit applications
+    wineWow64Packages.stable
+    # support 64-bit only
+    wine64
+    # wine-staging (version with experimental features)
+    wineWow64Packages.staging
+    # winetricks (all versions)
+    winetricks
+    # native wayland support (unstable)
+    wineWow64Packages.waylandFull
   ];
 
   # Enable flakes
