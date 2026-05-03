@@ -152,7 +152,7 @@
   };
 
   programs.gamemode.enable = true;
-  programs.git.config.core.editor = "nvim";
+  programs.git.config.core.editor = "neovim";
   programs.steam.gamescopeSession.enable = true;
 
   # Install firefox
@@ -206,6 +206,9 @@
     # native wayland support (unstable)
     wineWow64Packages.waylandFull
   ];
+
+  # Set nvim as system editor
+  environment.variables.EDITOR = "neovim";
 
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];  
