@@ -72,6 +72,9 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Enable flatpak
+  services.flatpak.enable = true;
+
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -121,8 +124,8 @@
     darktable
     gimp
     discord
+    prusa-slicer
     orca-slicer
-    kicad
     # Dev tools
     kitty
     vscode
@@ -140,7 +143,6 @@
     python3
     # Misc
     nextcloud-client
-    bottles
     telegram-desktop
     ];
 
@@ -189,6 +191,8 @@
     git
     gnumake
     docker
+    gtk4
+    wrapGAppsHook4
   ];
 
   # Enable flakes
