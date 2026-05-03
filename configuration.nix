@@ -126,6 +126,7 @@
     discord
     prusa-slicer
     orca-slicer
+    yabridge
     # Dev tools
     kitty
     vscode
