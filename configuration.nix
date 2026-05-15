@@ -10,6 +10,8 @@
       ./hardware-configuration.nix
     ];
 
+  # Kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.systemd-boot.edk2-uefi-shell.enable = true;
@@ -126,7 +128,6 @@
     discord
     prusa-slicer
     orca-slicer
-    yabridge
     # Dev tools
     kitty
     vscode
@@ -194,17 +195,7 @@
     docker
     gtk4
     wrapGAppsHook4
-    # Wine
-    # support both 32-bit and 64-bit applications
-    wineWow64Packages.stable
-    # support 64-bit only
-    wine64
-    # wine-staging (version with experimental features)
-    wineWow64Packages.staging
-    # winetricks (all versions)
-    winetricks
-    # native wayland support (unstable)
-    wineWow64Packages.waylandFull
+    pkgs.winePackages.yabridge
   ];
 
   # Set nvim as system editor
