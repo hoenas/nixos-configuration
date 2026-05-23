@@ -113,7 +113,7 @@
   users.users.jonas = {
     isNormalUser = true;
     description = "Jonas";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" ];
     packages = with pkgs; [
     # General stuff
     nerd-fonts.adwaita-mono
@@ -143,6 +143,7 @@
     libtool
     pkg-config
     python3
+    minicom
     # Misc
     nextcloud-client
     telegram-desktop
