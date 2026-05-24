@@ -1,6 +1,6 @@
-.PHONY: update
 update:
 	cp configuration.nix /etc/nixos/configuration.nix
+	nix-channel --update
 	nixos-rebuild switch --upgrade
 
 update-bootloader: update
@@ -10,3 +10,9 @@ update-bootloader: update
 clean:
 	nix-collect-garbage
 	nix-env --delete-generations +3
+
+switch-channel-stable:
+	nix-channel --add https://nixos.org/channels/nixos-25.11 nixos
+
+switch-channel-unstable:
+	nix-channel --add https://nixos.org/channels/nixos-unstable nixos
