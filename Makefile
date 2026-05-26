@@ -1,7 +1,7 @@
 update:
 	cp configuration.nix /etc/nixos/configuration.nix
 	nix-channel --update
-	nixos-rebuild switch --upgrade
+	nixos-rebuild --max-jobs 4 switch --upgrade
 
 update-bootloader: update
 	nix-channel --update
