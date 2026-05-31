@@ -154,7 +154,7 @@
   };
 
   programs.gamemode.enable = true;
-  programs.git.config.core.editor = "neovim";
+  programs.git.config.core.editor = "nvim";
   programs.steam.gamescopeSession.enable = true;
 
   # Install firefox
@@ -182,7 +182,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim
     # Util
     tree
     htop
@@ -200,7 +199,7 @@
   ];
 
   # Set nvim as system editor
-  environment.variables.EDITOR = "neovim";
+  environment.variables.EDITOR = "nvim";
 
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];  
