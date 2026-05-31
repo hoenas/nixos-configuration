@@ -144,6 +144,7 @@
     pkg-config
     python3
     minicom
+    claude-code
     # Misc
     nextcloud-client
     telegram-desktop
