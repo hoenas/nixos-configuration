@@ -79,6 +79,8 @@
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
+  # Prevent audio delay of 1-2 seconds when playing over HDMI
+  hardware.pulseaudio.extraConfig = "unload-module module-suspend-on-idle";
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -128,6 +130,7 @@
     discord
     prusa-slicer
     orca-slicer
+    qgroundcontrol
     # Dev tools
     kitty
     vscode
@@ -148,6 +151,8 @@
     # Misc
     nextcloud-client
     telegram-desktop
+    # Support NTFS of external drive
+    ntfs3g
     ];
 
     shell = pkgs.zsh;
