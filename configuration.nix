@@ -115,7 +115,7 @@
   users.users.jonas = {
     isNormalUser = true;
     description = "Jonas";
-    extraGroups = [ "networkmanager" "wheel" "dialout" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "docker" ];
     packages = with pkgs; [
     # General stuff
     nerd-fonts.adwaita-mono
@@ -206,6 +206,9 @@
 
   # Set nvim as system editor
   environment.variables.EDITOR = "nvim";
+
+  # Enable docker
+  virtualisation.docker.enable = true;
 
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];  
