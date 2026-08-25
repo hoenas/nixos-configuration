@@ -149,6 +149,7 @@
     minicom
     claude-code
     # Misc
+    thunderbird
     nextcloud-client
     telegram-desktop
     # Support NTFS of external drive
